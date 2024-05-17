@@ -5,15 +5,16 @@ import Link from 'next/link'
 import Image from "next/image";
 import LoadingScreen from '@components/Loadingscreen'
 
-export default function () {
+export default function Index() {
   const [profile, setProfile] = useState({})
   const router = useRouter()
-
+  
   const logout = async () => {
     liff.logout();
     router.push('/')
+    
   }
-
+  
   useEffect(() => {
     const getUser = async () => {
       try {
